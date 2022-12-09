@@ -1,0 +1,23 @@
+img {
+    width: 50px;
+}
+
+input {
+    padding: 10px;
+}
+
+.green {
+    color: green;
+    font-size: 20px;
+}
+
+.big {
+    font-size: 40px;
+}
+.normal{
+    border: green 5px solid;
+    padding: 5px;
+}
+.error-normal{
+    border-color: red;
+}
