@@ -1,6 +1,6 @@
-var operationButton=document.getElementsByClassName('operation-button');
+var operationButton = document.getElementsByClassName('operation-button');
 
-var resultElement=document.getElementById('result');
+var resultElement = document.getElementById('result');
 
 var input1 = document.getElementById('number 1');
 var input2 = document.getElementById('number 2');
@@ -9,13 +9,18 @@ function makeOperation(operationCode) {
     var number1 = Number(input1.value);
     var number2 = Number(input2.value);
     if (operationCode === '+') {
-        resultElement.innerHTML=number1 + number2;
+        resultElement.innerHTML = number1 + number2;
     } else if (operationCode === '-') {
-        resultElement.innerHTML=number1 - number2;
+        resultElement.innerHTML = number1 - number2;
     } else if (operationCode === '*') {
-        resultElement.innerHTML=number1 * number2;
+        resultElement.innerHTML = number1 * number2;
     } else if (operationCode === '/') {
-        resultElement.innerHTML=number1 / number2;
+        if (number2 === 0) {
+            window.alert('На 0 делить нельзя!');
+        } else {
+            resultElement.innerHTML = number1 / number2;
+
+        }
     }
 }
 
