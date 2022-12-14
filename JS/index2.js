@@ -12,25 +12,28 @@ function getNumber1(){
 function getNumber2(){
     return Number(input2.value);
 }
+function makeOperation(operationCode){
+    if (operationCode==='+') {
+        return getNumber1()+getNumber2();
+    } else if (operationCode==='-'){
+        return getNumber1()-getNumber2();
+    } else if (operationCode==='*'){
+        return getNumber1()*getNumber2();
+    } else if (operationCode==='/') {
+        return getNumber1()/getNumber2();
+    }
+}
 function onButtonPlusClick(){
-    var plus=getNumber1()+getNumber2();
-
-    window.alert(plus);
+    window.alert(makeOperation('+'));
 }
 function onButtonMinusClick(){
-    var minus=getNumber1()-getNumber2();
-
-    window.alert(minus);
+    window.alert(makeOperation('-'));
 }
 function onButtonMultiplyClick(){
-    var multipy=getNumber1()*getNumber2();
-
-    window.alert(multipy);
+    window.alert(makeOperation('*'));
 }
 function onButtonDivideClick(){
-    var divide=getNumber1()/getNumber2();
-
-    window.alert(divide);
+    window.alert(makeOperation('/'));
 }
 
 buttonPlus.addEventListener('click', onButtonPlusClick);
