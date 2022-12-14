@@ -1,7 +1,5 @@
-var buttonPlus = document.getElementById('buttonPlus');
-var buttonMinus = document.getElementById('buttonMinus');
-var buttonMultiply = document.getElementById('buttonMultiply');
-var buttonDivide = document.getElementById('buttonDivide');
+var operationButton=document.getElementsByClassName('operation-button');
+
 var input1 = document.getElementById('number 1');
 var input2 = document.getElementById('number 2');
 
@@ -24,8 +22,6 @@ function onOperationButtonClick(eventObject) {
     var operation = clickedElement.innerHTML;
     makeOperation(operation);
 }
-
-var operationButton = [buttonPlus, buttonMinus, buttonMultiply, buttonDivide];
 
 for (var i = 0; i < operationButton.length; i++) {
     operationButton[i].addEventListener('click', onOperationButtonClick);
