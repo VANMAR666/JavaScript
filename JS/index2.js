@@ -2,29 +2,21 @@ var buttonPlus = document.getElementById('buttonPlus');
 var buttonMinus = document.getElementById('buttonMinus');
 var buttonMultiply = document.getElementById('buttonMultiply');
 var buttonDivide = document.getElementById('buttonDivide');
-
 var input1 = document.getElementById('number 1');
 var input2 = document.getElementById('number 2');
 
-function getNumber1() {
-    return Number(input1.value);
-}
-
-function getNumber2() {
-    return Number(input2.value);
-}
-
 function makeOperation(operationCode) {
+    var number1 = Number(input1.value);
+    var number2 = Number(input2.value);
     if (operationCode === '+') {
-        var result = getNumber1() + getNumber2();
+        window.alert(number1 + number2);
     } else if (operationCode === '-') {
-        var result = getNumber1() - getNumber2();
+        window.alert(number1 - number2);
     } else if (operationCode === '*') {
-        var result = getNumber1() * getNumber2();
+        window.alert(number1 * number2);
     } else if (operationCode === '/') {
-        var result = getNumber1() / getNumber2();
+        window.alert(number1 / number2);
     }
-    window.alert(result);
 }
 
 function onOperationButtonClick(eventObject) {
@@ -33,7 +25,8 @@ function onOperationButtonClick(eventObject) {
     makeOperation(operation);
 }
 
-buttonPlus.addEventListener('click', onOperationButtonClick);
-buttonMinus.addEventListener('click', onOperationButtonClick);
-buttonMultiply.addEventListener('click', onOperationButtonClick);
-buttonDivide.addEventListener('click', onOperationButtonClick);
+var operationButton = [buttonPlus, buttonMinus, buttonMultiply, buttonDivide];
+
+for (var i = 0; i < operationButton.length; i++) {
+    operationButton[i].addEventListener('click', onOperationButtonClick);
+}
