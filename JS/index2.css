@@ -21,3 +21,14 @@
 .js-calculator .inputs-block .input-block label {
     display: block;
 }
+.js-calculator .results-block label{
+    display: block;
+    margin: 10px;
+}
+.js-calculator .results-block{
+    padding: 10px;
+}
+.js-calculator .results-block .result-block{
+    color: red;
+    font-size: 40px;
+}

@@ -1,5 +1,7 @@
 var operationButton=document.getElementsByClassName('operation-button');
 
+var resultElement=document.getElementById('result');
+
 var input1 = document.getElementById('number 1');
 var input2 = document.getElementById('number 2');
 
@@ -7,13 +9,13 @@ function makeOperation(operationCode) {
     var number1 = Number(input1.value);
     var number2 = Number(input2.value);
     if (operationCode === '+') {
-        window.alert(number1 + number2);
+        resultElement.innerHTML=number1 + number2;
     } else if (operationCode === '-') {
-        window.alert(number1 - number2);
+        resultElement.innerHTML=number1 - number2;
     } else if (operationCode === '*') {
-        window.alert(number1 * number2);
+        resultElement.innerHTML=number1 * number2;
     } else if (operationCode === '/') {
-        window.alert(number1 / number2);
+        resultElement.innerHTML=number1 / number2;
     }
 }
 
