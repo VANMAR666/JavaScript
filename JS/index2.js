@@ -3,47 +3,32 @@ var buttonMinus = document.getElementById('buttonMinus');
 var buttonMultiply = document.getElementById('buttonMultiply');
 var buttonDivide = document.getElementById('buttonDivide');
 
+var input1=document.getElementById('number 1');
+var input2=document.getElementById('number 2');
+
+function getNumber1(){
+    return Number(input1.value);
+}
+function getNumber2(){
+    return Number(input2.value);
+}
 function onButtonPlusClick(){
-    var input1=document.getElementById('number 1');
-    var input2=document.getElementById('number 2');
-
-    var number1=Number(input1.value);
-    var number2=Number(input2.value);
-
-    var plus=number1+number2;
+    var plus=getNumber1()+getNumber2();
 
     window.alert(plus);
 }
 function onButtonMinusClick(){
-    var input1=document.getElementById('number 1');
-    var input2=document.getElementById('number 2');
-
-    var number1=Number(input1.value);
-    var number2=Number(input2.value);
-
-    var minus=number1-number2;
+    var minus=getNumber1()-getNumber2();
 
     window.alert(minus);
 }
 function onButtonMultiplyClick(){
-    var input1=document.getElementById('number 1');
-    var input2=document.getElementById('number 2');
-
-    var number1=Number(input1.value);
-    var number2=Number(input2.value);
-
-    var multipy=number1*number2;
+    var multipy=getNumber1()*getNumber2();
 
     window.alert(multipy);
 }
 function onButtonDivideClick(){
-    var input1=document.getElementById('number 1');
-    var input2=document.getElementById('number 2');
-
-    var number1=Number(input1.value);
-    var number2=Number(input2.value);
-
-    var divide=number1/number2;
+    var divide=getNumber1()/getNumber2();
 
     window.alert(divide);
 }
